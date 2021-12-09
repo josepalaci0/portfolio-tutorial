@@ -6,7 +6,381 @@
   box-sizing: border-box;
 }
 
-body {
+.body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
+}
+/*  inicio --------header diseño*/
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/img/752164.jpg);
+  color: white;
+}
+.portafolio{
+  width: 100vw;
+  height: 100vh;
+  background-color: #191c32;
+  color: white;
+
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+.brand{
+  margin-top: -7px;
+}
+.brand span{
+  color: rgb(255, 0, 55);
+}
+.menu{
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  font-size: 30px;
+}
+.menu li{
+  list-style: none;
+
+}
+.menu a{
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px ;
+}
+.menu .active{
+  color: rgb(255, 0, 55);
+}
+.menu a:hover{
+
+  color: rgb(255, 0, 55);
+  transition: ease-in .4s;
+  border-radius: 15px;
+
+}
+.main{
+  margin: 0 auto;
+  width: 80vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+}
+.main img{
+  width: 350px;
+  border: 2px solid aqua;
+  height: 420px;
+  z-index: 1;
+  
+}
+
+h1{
+  font-size: 3em;
+}
+span{
+  color: rgb(255, 0, 55);
+}
+
+.download-cv{
+padding: 10px 20px;
+background-color: rgb(255, 0, 55);
+border: none;
+border-radius: 20px;
+margin-top: 10px;
+cursor: pointer;
+box-shadow: 1px 3px 11px -5px rgba(102,231,200,.69);
+
+}
+.download-cv:hover{
+  background-color: white;
+  box-shadow: none;
+}
+
+/*Redes*/
+.redes {  
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  font-size: 50px;
+  position: relative;
+  transform: translate(50%, -3500%);
+
+}
+.redes-f{
+  color: rgb(255, 255, 255);
+}
+.redes-w{
+  color: forestgreen;
+}
+.redes-l{
+  color: rgb(25, 85, 175);
+}
+
+
+
+/*  fin --------header diseño*/
+
+/*   inicio ---------main diseño*/
+.about{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  width: 100%;
+  align-items: center;
+
+ 
+  
+}
+.about img{
+  width: 100%;
+  grid-column: 1/5;
+}
+.about-info{
+  grid-column: 5/10;
+  padding: 3em;
+}
+.about-info h2{
+  font-size: 2em;
+  color: #191c32;
+}
+.divider{
+  height: 4px;
+  width: 60px;
+  background-color: aqua;
+  margin-top: 10px;
+  margin-bottom: 2em;
+}
+.about p{
+  margin-bottom: 1em;
+}
+/*   fin ---------main diseño*/
+
+/*   inicio ---------portafoli diseño*/
+.portafolio-headings{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px; 
+  height: 100%;
+ 
+}
+
+.portafolio-headings h2{
+  font-size: 3.5em;
+  margin-top: -450px;
+
+}
+
+
+.container{
+  width: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #191c32;
+  margin-top: -450px;
+  
+}
+.container .card{
+  width: 250px;
+  height: 400px;
+  box-sizing: 8px;
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+  background-color: lightseagreen;
+}
+.card-img{
+  width: 100%;
+  height: 150px;
+  background-image: url(/img/2-original.png);
+  background-size: cover;
+}
+.card-title{
+  padding: 20px;
+}
+.link-proyectos{
+  display: flex;
+  justify-content: space-evenly;
+}
+.link-proyectos a{
+  color: white;
+  text-decoration: none;
+}
+.link-proyectos i{
+  font-size: 1.5em;
+}
+.card .detalles{
+  display: flex;
+  align-self: center;
+  margin: 1em;
+}
+.card .detalles a{
+  text-decoration: none;
+  color:#191c32;
+}
+/*   fin ---------portafoli diseño*/
+
+
+/*media query*/
+
+
+
+
+
+
+@media all and (min-width: 350px){
+  .redes {           
+    transform: translate(50%, -4000%);  
+  }
+  .main img{
+    width: 200px;  
+    height: 280px;
+    transform: translate(-50%, -40%);
+    
+  }
+  .menu{
+    display: none;    
+  }
+  
+  .info-content{   
+    align-items: center;
+    margin: 0 auto;
+    width: 35vw;
+    height: 35vh;
+    display: grid;
+    transform: translate(-20%, 70%);
+  }
+}
+
+@media all and (min-width: 412px){
+  .redes {           
+    transform: translate(50%, -4000%);  
+  }
+  .main img{
+    width: 280px;
+    height: 300px;
+    transform: translate(-98%, -40%); 
+    
+  }
+ 
+  .info-content{
+    padding: none auto;
+    align-items: center;
+    margin: 0 auto;
+    width: 70vw;
+    height: 35vh;
+    display: grid;
+    transform: translate(1%, 70%);
+  }
+  .menu{
+    display: none;
+    width: 50%;
+    justify-content: space-around;
+    font-size: 30px;
+  }
+ } 
+ @media all and (min-width: 750px){
+  .redes {           
+    transform: translate(50%, -3500%);  
+  }
+  .main img{
+    width: 300px;
+    height: 400px;
+    transform: translate(20%, -10%); 
+    
+  }
+ 
+  .info-content{
+    padding: none auto;
+    align-items: center;
+    margin: 0 auto;
+    width: 35vw;
+    height: 35vh;
+    display: grid;
+    transform: translate(1%, 0%);
+  }
+  .menu{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    font-size: 30px;
+    transform: translate(-20%, 0%); 
+  }
+ } 
+
+
+
+ @media all and (min-width: 800px){
+  .redes {           
+    transform: translate(50%, -3500%);  
+  }
+  .main img{
+    width: 300px;
+    height: 400px;
+    transform: translate(20%, 0%); 
+    
+  }
+ 
+  .info-content{
+    padding: none auto;
+    align-items: center;
+    margin: 0 auto;
+    width: 35vw;
+    height: 35vh;
+    display: grid;
+    transform: translate(1%, 0%);
+  }
+  .menu{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    font-size: 30px;
+  }
+ } 
+
+ @media all and (min-width: 940px){
+.menu{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    font-size: 30px;
+}
+.menu{
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+.main img{
+  width: 350px;
+  border: 2px solid aqua;
+  height: 420px;
+  z-index: 1;
+  transform: translate(20%, 0%); 
+  
+}
+
+.info-content{
+  padding: none auto;
+  align-items: center;
+  margin: 0 auto;
+  width: 35vw;
+  height: 35vh;
+  display: grid;
+  transform: translate(0%, -3%);
+}
+.redes {  
+  padding: 0;
+  width: 10px;
+  height: 10px;
+  font-size: 50px;
+  position: relative;
+  transform: translate(50%, -3500%);
+
+}
 }
